@@ -1,0 +1,79 @@
+
+
+  body { 
+      background-color: #deffde;
+  }     
+
+  section { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul { 
+    padding: 0 ;
+    list-style: none;
+  }
+
+  ul {
+    margin-top: 15%;
+  }
+
+  ul li { 
+    margin: 20px;
+}
+
+  #ti { 
+      font-family: -apple-system, BlinkMacSystemFont ,sans-serif;
+      -webkit-user-select: none;  /* Chrome all / Safari all */
+      -moz-user-select: none;     /* Firefox all */
+      -ms-user-select: none;      /* IE 10+ */
+      user-select: none;  
+      font-weight: bold;
+      margin-bottom: 30px;
+  }
+
+  #pass {
+      color: #747070;
+      padding: 7px;
+      border-style: solid;
+      border-color: #478847;
+      border-radius: 5px;
+  }
+  
+
+  img { 
+    position: relative;
+    top: 8px;
+    margin-left: 55px;
+    opacity: 0.4;
+    cursor: pointer;
+  }
+
+  img:hover { 
+    opacity: 1.0;
+  }
+
+  button { 
+      -webkit-user-select: none;  /* Chrome all / Safari all */
+      -moz-user-select: none;     /* Firefox all */
+      -ms-user-select: none;      /* IE 10+ */
+      user-select: none;  
+      user-select: none;
+      background-color: #28f028;
+      font-family:'Courier New', Courier, monospace;
+      font-size: 17px;
+      font-weight: bold;
+      outline: none;
+      border: none;
+      padding: 10px;
+      border-radius: 7px;
+      cursor: pointer;
+  }
+
+  button:hover { 
+    background-color: #a9f1a9;
+  }
+  button:active { 
+    background-color: #05c705
+  }

@@ -1,0 +1,103 @@
+body { 
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    
+}
+
+section { 
+text-align: center;
+}
+
+ul { 
+    list-style-type: none;
+}
+
+li { 
+position: relative;
+top: 180px;
+}
+
+#input1 { 
+    width: 30%;
+    height: 600px;
+    margin: 50px 0px 0px 50px;
+    line-break: auto;
+    resize: none;
+    position: relative;
+    bottom: 430px;
+    
+}
+
+#input2 { 
+    width: 30%;
+    height: 600px;
+    margin: 50px 50px 0px 0px;
+    line-break: auto;
+    float: right;
+    resize: none;
+    position: relative;
+    bottom: 430px;
+}
+
+#check { 
+    position: relative;
+    left: 60px;
+}
+#checkl { 
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;  
+    position: relative;
+    left: 60px;
+}
+
+#wordInput {
+    margin: 10px 0px 110px 0px;
+    position: relative;
+    left: 55px;
+}
+
+#changeInput { 
+    margin: 10px 0px 50px 0px;
+}
+
+button { 
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;  
+    background-color:#bebebe;
+    outline: none;
+    padding: 5px 35px 5px 35px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+button:hover { 
+    background-color: #cccaca;
+  }
+button:active { 
+    background-color: #868282;
+  }
+
+div { 
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 940px) {
+#input1 { 
+    bottom: 0px;
+}
+#input2 { 
+    bottom: 0px;
+}
+#counter { 
+position: relative;
+bottom: 150px;
+}
+
+
+}
