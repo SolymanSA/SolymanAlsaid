@@ -313,6 +313,9 @@ header:after {
 
 
 @media screen and (max-width: 940px) {
+    header h1 { 
+        font-size: 45px;
+    }
     .frow { 
        flex-wrap: wrap;
     }
@@ -327,7 +330,7 @@ header:after {
 
      .abilcon { 
          flex-direction: column;
-     }
+     } 
      .abil2 { 
          position: relative;
          bottom: 45px;
