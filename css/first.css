@@ -63,9 +63,7 @@ header {
 }
 
 header a { 
-    position: relative;
-    bottom: 220px;
-    color: rgb(182, 194, 255);
+    color: #b6c2ff;
 }
 
 header > * { 
