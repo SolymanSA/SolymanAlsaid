@@ -174,9 +174,7 @@ header:after {
     direction: ltr;
 }
 
-.abt { 
-    margin-left: 175px;
-}
+
 
 
 .abilcon li  {
@@ -215,6 +213,7 @@ header:after {
      flex-direction: row;
      justify-content: center;
      align-items: center;
+     direction: ltr;
  }
  .wecon li { 
     border-top: 1px solid #a4acac;
@@ -343,7 +342,30 @@ header:after {
 }
 
 @media screen and (max-width: 610px) { 
+    .det { 
+        text-align: center;
+    }
+    
+    .frowen { 
+        margin-left: -20px;
+    }
+    .frowar { 
+        margin-right: -30px;
+    }
+
+    .abilcon { 
+        margin-left: -40px;
+    }
+
+    .abilcon li  {
+        width: 330px;
+    }
+
     .imageCon { 
         width: 300px;
+    }
+
+    .wecon {
+        margin-left: -40px;
     }
 }
