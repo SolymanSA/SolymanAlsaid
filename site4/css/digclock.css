@@ -62,5 +62,8 @@ span {
     .dhour , .dmin , .dsec , .digclock p , span { 
         font-size: 3em;
     }
+    .cbt { 
+        display: none;
+    }
    
 }
