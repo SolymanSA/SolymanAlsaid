@@ -67,7 +67,6 @@ function Cbtn() {
     document.getElementById("clock").style.display = "none";
     document.getElementById("digclock").style.display = "flex";
     bt.innerHTML = "Clock";
-    console.log(bt.innerHTML);
   } else { 
     document.getElementById("digclock").style.display = "none";
     document.getElementById("clock").style.display = "flex";
