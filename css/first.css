@@ -354,10 +354,10 @@ p {
         text-align: center;
     }
     
-    .frowen { 
+    .frow:lang(en) { 
         margin-left: -20px;
     }
-    .frowar { 
+    .frow:lang(ar) { 
         margin-right: -30px;
     }
 
@@ -374,11 +374,11 @@ p {
         width: 300px;
     }
 
-    .weconen {
+    .wecon:lang(en) {
         margin-left: -40px;
     }
 
-    .weconar {
+    .wecon:lang(ar) {
         margin-right: -40px;
     }
 }
