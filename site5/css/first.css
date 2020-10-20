@@ -23,6 +23,7 @@ h1 {
     justify-content: center;
     flex-direction: column;
     min-height: 60vh;
+    text-align: center;
 }
 
 .fcon input { 
@@ -46,6 +47,7 @@ h1 {
     border: none;
     border-radius: 6px;
     padding: 15px 25px;
+    margin-top: 10px;
 }
 .addB:hover { 
     background-color: #a3fffa;
@@ -81,7 +83,6 @@ h1 {
 .p { 
     font-size: 2.5rem;
     min-width: 600px;
-    
     padding: 10px;
     margin: 10px 0px;
     border-radius:3px;
@@ -152,3 +153,12 @@ h1 {
     background-color: #77b9b7;
 }
 
+
+@media screen and (max-width:1000px ) { 
+.p { 
+    min-width: 280px;
+ }
+.checkb { 
+    left: 110px;
+}
+}
