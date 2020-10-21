@@ -1,0 +1,93 @@
+
+
+var database = firebase.database();
+var n = 0;
+database.ref('AA Number of posts').once('value').then(function (snapshot) {
+    n = (snapshot.val() && snapshot.val().postsNumber) || 0;
+});
+
+readFromDataBase();
+
+async function readFromDataBase() {
+    // var userId = firebase.auth().currentUser.uid;
+    // return firebase.database().ref('/users/' + userId).once('value').then(function (snapshot) {
+    //     var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+    //     // ...
+    // })
+    var n = 0;
+
+    await database.ref('AA Number of posts').once('value').then(function (snapshot) {
+        n = (snapshot.val() && snapshot.val().postsNumber) || 0;
+    });
+
+    document.getElementById('loader').style = "display:none;"
+
+    console.log(n);
+    for (let i = 1; i <= n; i++) {
+
+        database.ref('post' + i).once('value').then(function (snapshot) {
+            var postname = (snapshot.val() && snapshot.val().poastName) || 'Anonymous';
+            var postText = (snapshot.val() && snapshot.val().postText) || 'Anonymous';
+
+            var fie = document.createElement("fieldset");
+            fie.id = "pFieldset" + i;
+            var leg = document.createElement("legend");
+            leg.innerHTML = postname;
+            var fdiv = document.createElement("div");
+            fdiv.innerHTML = postText;
+
+
+            document.getElementById("posts").prepend(fie);
+            document.getElementById("pFieldset" + i).appendChild(leg);
+            document.getElementById("pFieldset" + i).appendChild(fdiv);
+
+
+        });
+
+    }
+
+}
+
+console.log(n);
+
+var x = 0;
+async function Post() {
+    var nameInput = document.getElementById("inname").value;
+    var postInput = document.getElementById("textarea").value;
+
+    // creation of the elements .
+
+    var fie = document.createElement("fieldset");
+    fie.id = "pFieldset" + n;
+    var leg = document.createElement("legend");
+    leg.innerHTML = nameInput;
+    var fdiv = document.createElement("div");
+    fdiv.innerHTML = postInput;
+
+    if (postInput.trim() != "" && nameInput.trim() != "") {
+        document.getElementById("posts").prepend(fie);
+        document.getElementById("pFieldset" + n).appendChild(leg);
+        document.getElementById("pFieldset" + n).appendChild(fdiv);
+        n++;
+        document.getElementById('loader').style = "display:flex;"
+
+        await database.ref('AA Number of posts').set({ postsNumber: n });
+        writepost(nameInput, postInput);
+        document.getElementById('loader').style = "display:none;"
+
+    }
+
+
+
+}
+
+
+
+async function writepost(name, post) {
+    console.log(n);
+    database.ref('post' + n).set({
+        postText: post,
+        poastName: name
+    });
+}
+
