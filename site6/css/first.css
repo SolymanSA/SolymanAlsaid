@@ -19,6 +19,9 @@ header {
     color: whitesmoke;
 }
 
+p { 
+    margin: 20px;
+}
 .enterdiv { 
     display: flex;
     justify-content: center;
@@ -90,6 +93,10 @@ header {
     align-items: center;
 }
 
+
+
+
+/* Loader */
 .lds-ring {
     position: relative;
     width: 80px;
@@ -124,4 +131,14 @@ header {
       transform: rotate(360deg);
     }
 }
+
+
+@media screen and (max-width:700px ) { 
+    .enterdiv textarea {
+        width: 350px;
+    }
+    .posts fieldset { 
+        width: 350px;
+    }
+    }
   

@@ -15,14 +15,12 @@ async function readFromDataBase() {
     //     // ...
     // })
     var n = 0;
-
     await database.ref('AA Number of posts').once('value').then(function (snapshot) {
         n = (snapshot.val() && snapshot.val().postsNumber) || 0;
     });
 
     document.getElementById('loader').style = "display:none;"
 
-    console.log(n);
     for (let i = 1; i <= n; i++) {
 
         database.ref('post' + i).once('value').then(function (snapshot) {
@@ -48,7 +46,6 @@ async function readFromDataBase() {
 
 }
 
-console.log(n);
 
 var x = 0;
 async function Post() {
