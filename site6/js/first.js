@@ -19,7 +19,6 @@ async function readFromDataBase() {
         n = (snapshot.val() && snapshot.val().postsNumber) || 0;
     });
 
-    document.getElementById('loader').style = "display:none;"
 
     for (let i = 1; i <= n; i++) {
 
@@ -32,7 +31,7 @@ async function readFromDataBase() {
             var leg = document.createElement("legend");
             leg.innerHTML = postname;
             var fdiv = document.createElement("div");
-            fdiv.innerHTML = postText;
+            fdiv.innerHTML = postText; fdiv.lang = "ar";
 
 
             document.getElementById("posts").prepend(fie);
@@ -41,6 +40,8 @@ async function readFromDataBase() {
 
 
         });
+
+        document.getElementById('loader').style = "display:none;"
 
     }
 
@@ -62,17 +63,22 @@ async function Post() {
     fdiv.innerHTML = postInput;
 
     if (postInput.trim() != "" && nameInput.trim() != "") {
+        document.getElementById('loader').style = "display:flex;"
+
         document.getElementById("posts").prepend(fie);
         document.getElementById("pFieldset" + n).appendChild(leg);
         document.getElementById("pFieldset" + n).appendChild(fdiv);
         n++;
-        document.getElementById('loader').style = "display:flex;"
+        document.getElementById("inname").value = '';
+        document.getElementById("textarea").value = '';
 
         await database.ref('AA Number of posts').set({ postsNumber: n });
         writepost(nameInput, postInput);
         document.getElementById('loader').style = "display:none;"
 
+
     }
+
 
 
 
