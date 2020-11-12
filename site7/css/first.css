@@ -29,7 +29,7 @@ table {
     overflow: auto;
     width: 75%;
     border-collapse: collapse;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 } 
 
 .cen { 
@@ -260,11 +260,5 @@ td div:hover span {
     }
     .modal textarea {
         width: 230px;
-    }
-
-    td div { 
-        
-        height: 130%;
-        
     }
 }
