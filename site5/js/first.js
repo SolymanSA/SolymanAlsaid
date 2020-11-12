@@ -142,7 +142,7 @@ function checkTask() {
     if (cb.checked) {
         p.style.cssText += "text-decoration: line-through; opacity:0.3; color: #bebebe";
     } else {
-        p.style.cssText += "text-decoration: none currentcolor solid; opacity:1; color: black";
+        p.style.cssText += "text-decoration: none; opacity:1; color: black";
     }
 
 
