@@ -226,7 +226,7 @@ function changeTable(cdate) {
         var td = document.getElementsByTagName('td');
         for (let j = 0; j < td.length; j++) {
             if (td[j].classList.contains(th[i].innerHTML.substring(0, 3).toLowerCase())) {
-                td[j].style = ""
+                td[j].style = "";
             }
         }
     }
