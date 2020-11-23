@@ -8,6 +8,10 @@ database.ref('AA Number of posts').once('value').then(function (snapshot) {
 
 readFromDataBase();
 
+database.ref('post').on('value', function (snapshot) {
+    console.log("here");
+});
+
 async function readFromDataBase() {
     // var userId = firebase.auth().currentUser.uid;
     // return firebase.database().ref('/users/' + userId).once('value').then(function (snapshot) {
@@ -22,7 +26,7 @@ async function readFromDataBase() {
 
     for (let i = 1; i <= n; i++) {
 
-        database.ref('post' + i).once('value').then(function (snapshot) {
+        database.ref('post' + i).on('value', function (snapshot) {
             var postname = (snapshot.val() && snapshot.val().poastName) || 'Anonymous';
             var postText = (snapshot.val() && snapshot.val().postText) || 'Anonymous';
 

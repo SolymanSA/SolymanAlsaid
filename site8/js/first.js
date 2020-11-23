@@ -60,8 +60,15 @@ database.ref('text').once('value').then(function (snapshot) {
 });
 
 //=========
+checkMood = false;
+database.ref('text').on('value', function (snapshot) {
+    var tex = (snapshot.val() && snapshot.val().Text) || " ";
 
+    if (checkMood) {
+        quill.setContents(tex);
+    }
 
+});
 
 
 vi.onclick = function () {
@@ -72,16 +79,9 @@ vi.onclick = function () {
 
     quill.enable(false);
 
-    viInterv = setInterval(() => {
-
-        database.ref('text').once('value').then(function (snapshot) {
-            var tex = (snapshot.val() && snapshot.val().Text) || " ";
-
-            quill.setContents(tex);
+    checkMood = true;
 
 
-        });
-    }, 250);
 }
 
 ed.onclick = function () {
@@ -92,7 +92,8 @@ ed.onclick = function () {
 
     quill.enable(true);
 
-    clearInterval(viInterv);
+    checkMood = false;
+
 
 }
 

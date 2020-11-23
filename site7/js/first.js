@@ -23,7 +23,7 @@ async function readFromDataBase() {
 
     for (let i = 1; i <= n; i++) {
 
-        database.ref('reserve' + i).once('value').then(function (snapshot) {
+        database.ref('reserve' + i).on('value', function (snapshot) {
             var week = (snapshot.val() && snapshot.val().week) || "Unknown";
             var day = (snapshot.val() && snapshot.val().day) || "Unknown";
             var time = (snapshot.val() && snapshot.val().time) || "Unknown";
@@ -181,7 +181,7 @@ async function checkData() {
 
     for (let i = 1; i <= n; i++) {
 
-        database.ref('reserve' + i).once('value').then(function (snapshot) {
+        database.ref('reserve' + i).on('value', function (snapshot) {
             var week = (snapshot.val() && snapshot.val().week) || "Unknown";
             var day = (snapshot.val() && snapshot.val().day) || "Unknown";
             var time = (snapshot.val() && snapshot.val().time) || "Unknown";
@@ -337,7 +337,7 @@ confb.onclick = async function () {
 
         for (let i = 1; i <= n; i++) {
 
-            await database.ref('reserve' + i).once('value').then(function (snapshot) {
+            await database.ref('reserve' + i).on('value', function (snapshot) {
                 var weekd = (snapshot.val() && snapshot.val().week) || "Unknown";
                 var dayd = (snapshot.val() && snapshot.val().day) || "Unknown";
                 var timed = (snapshot.val() && snapshot.val().time) || "Unknown";
