@@ -1,6 +1,11 @@
 
 var sd = new Date();
-document.getElementById('sdate').defaultValue = sd.getFullYear() + '-' + (sd.getMonth() + 1) + '-' + sd.toDateString().substring(8, 10);
+
+var ed = sd.getMonth() + 1;
+if (ed.toString().length == 1) {
+    ed = "0" + ed;
+}
+document.getElementById('sdate').defaultValue = sd.getFullYear() + '-' + ed + '-' + sd.toDateString().substring(8, 10);
 
 
 var database = firebase.database();
