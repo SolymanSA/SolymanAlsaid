@@ -331,19 +331,28 @@ p {
         margin-right: 10px;
      }
 
-     .moh { 
+    .moh { 
          display: none;
      }
 
-     .abilcon { 
+    .abilcon { 
          flex-direction: column;
      } 
-     .abil2 { 
+    .abil2 { 
          position: relative;
          bottom: 45px;
      }
      
-     .wecon { 
+    .img-overlay {
+        opacity: 1;
+        backdrop-filter: blur(2px);
+    }
+    
+    .img-overlay > * {
+        transform: translateX(0px);
+    }
+
+    .wecon { 
         flex-direction: column;
     }
     
